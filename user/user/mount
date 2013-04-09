@@ -1,0 +1,6 @@
+sysctl compat.linux.osrelease=2.6.32
+ kldload fdescfs linprocfs linsysfs tmpfs
+mount -t  devfs devfs ./ubuntu/dev
+mount -t  linprocfs linprocfs  ./ubuntu/proc
+mount -t linsysfs linsysfs ./ubuntu/sys
+mount -t tmpfs tmpfs ./ubuntu/lib/init/rw
